@@ -1,6 +1,7 @@
 # Puppet 3.7.4
 
     docker run -it mikaelsmith/puppet:3.7.4 bash
+
     echo 'package { "vim": }' > test.pp
     echo 'package { "gem-vim": name => "vim", provider => gem }' >> test.pp
     puppet apply test.pp
@@ -18,6 +19,7 @@ So people do awful things like:
 # Puppet-Agent Nightly (March 10th)
 
     docker run -it mikaelsmith/puppet-agent bash
+
     puppet apply -e 'package { "vim": }; package { "gem-vim": name => "vim", provider => gem }'
 
 # Notes
