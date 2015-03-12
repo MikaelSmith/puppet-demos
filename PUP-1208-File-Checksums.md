@@ -18,6 +18,7 @@ Setup a master serving a module containing a large file, verified via sha256.
 ## agent
 
     docker run -it --link server3:server3 mikaelsmith/puppet:3.7.4 bash
+
     puppet agent -t --server server3
 
 ## Try with md5
@@ -48,6 +49,7 @@ Syncs every time (same as sha256).
 
 # agent
     docker run -it --link server4:server4 mikaelsmith/puppet-agent bash
+
     puppet agent -t --server server4
 
 ## Try with mtime
