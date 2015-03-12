@@ -5,6 +5,16 @@
     echo 'package { "gem-vim": name => "vim", provider => gem }' >> test.pp
     puppet apply test.pp
 
+So people do awful things like:
+
+    package { "vim":
+      ensure => present,
+    }
+    exec { "I hate myself and I want to die":
+      command => "gem install vim",
+      creates  => "/usr/local/share/gems/gems/vim-0.0.1/Gemfile"
+    }
+
 # Puppet-Agent Nightly (March 10th)
 
     docker run -it mikaelsmith/puppet-agent bash
